@@ -5,7 +5,7 @@ RETURN
         friend.firstName AS personFirstName,
         friend.lastName AS personLastName,
         message.id AS messageId,
-        CASE has (message.content)
+        CASE EXISTS (message.content)
                 WHEN true THEN message.content
                 ELSE message.imageFile
         END AS messageContent,
