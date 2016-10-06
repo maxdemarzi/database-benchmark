@@ -23,11 +23,14 @@ loadDB() {
 }
 
 runQuery() {
+  # Create schema index for :Person(id)
+  $NEO4J_HOME/bin/neo4j-shell -file "queries/index1.cypher" &> /dev/null
+
   # Warm up the silly cache
   $NEO4J_HOME/bin/neo4j-shell -file "queries/warm.cypher" &> /dev/null
 
   echo $'\n'"Running the set of queries in the folder 'queries'..."
-  for query in `ls -v queries/*.cypher`; do
+  for query in `ls -v queries/query*.cypher`; do
     echo -ne "-- Running query $query\033[K\r"; echo
      # Run the query 5 times sequentially
     for i in {1..5}; do

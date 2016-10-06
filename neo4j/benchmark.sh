@@ -108,7 +108,7 @@ runQueries() {
   while true; do
     clear && read -p "## Running Queries
      Usage:
-      1, To list alla available queries.
+      1, To list all available queries.
       2, To run a specific query.
       3, To run all LDBC queries.
       m, To return to main menu.

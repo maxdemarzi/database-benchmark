@@ -106,9 +106,9 @@ L3 cache: 30 MB
 RAM: 4TB @ 1066MHz
 ```
 
-Running Ubuntu 14.04 LTS With Neo4J 2.3.4 Community edition and java-1.7.0-openjdk.
+Running Ubuntu 14.04 LTS With Neo4J 3.0.6 Community edition and java-1.7.0-openjdk.
 
-**Note:** The community edition of Neo4j  was used as we wanted all the chosen frameworks to be freely available to the public. 2.3 was used instead of the 3+ as this is the version the LDBC queries were written for (they use HAS instead of EXISTS – this modification only happened between 2.3 -> 3).
+**Note:** The community edition of Neo4j 3.0.6 was used as we wanted all the chosen frameworks to be freely available to the public.
 
 ####Neo4j Tuning
 
