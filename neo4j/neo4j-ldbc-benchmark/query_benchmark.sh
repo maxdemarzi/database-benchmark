@@ -26,6 +26,9 @@ runQuery() {
   # Create schema index for :Person(id)
   $NEO4J_HOME/bin/neo4j-shell -file "queries/index1.cypher" &> /dev/null
 
+  # Create schema index for :Tag(name)
+  $NEO4J_HOME/bin/neo4j-shell -file "queries/index2.cypher" &> /dev/null
+
   # Warm up the silly cache
   $NEO4J_HOME/bin/neo4j-shell -file "queries/warm.cypher" &> /dev/null
 
